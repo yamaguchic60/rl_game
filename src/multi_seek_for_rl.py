@@ -26,7 +26,7 @@ BLUE = (0, 0, 255)
 # エージェントの設定
 agent_size = 20
 agent_speed = 20
-num_agents = 10
+num_agents = 100
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f'Using {device} device')
 agents = [{'pos': [random.randint(0, WIDTH - agent_size), random.randint(0, HEIGHT - agent_size)], 'color': RED, 'q_table': torch.zeros((WIDTH // agent_speed, HEIGHT // agent_speed, 4), device=device)} for _ in range(num_agents)]
